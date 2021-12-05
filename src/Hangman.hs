@@ -40,6 +40,7 @@ randomWord' = gameWords >>= randomWord
 
 data Puzzle =
   Puzzle String [Maybe Char] [Char] Int
+  deriving (Eq)
 
 instance Show Puzzle where
   show (Puzzle _ discovered guessed lives) =
